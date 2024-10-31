@@ -1,4 +1,20 @@
-/* Estilos básicos para o vídeo */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body, html {
+    height: 100%;
+}
+
 .video-container {
     position: relative;
     height: 100vh;
@@ -46,4 +62,199 @@
 
 .btn:hover {
     background-color: #444;
+}
+
+#products {
+    
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+   
+}
+
+#products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+#products h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.produto  {
+    position: relative;
+    width: calc(25.33% - 20px);
+    margin: 30px 0;
+    padding: 60px;
+    background-color: #444;
+    border-radius: 10px;
+    box-shadow: 0 4px  8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+
+
+
+/*aqui separei a configuração de background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+
+
+
+
+
+
+.produto h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+
+}
+
+.produto p {
+    font-size: 1rem;
+}
+
+.produto:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    .produto {
+        flex: 100%;
+    }
+}
+
+
+
+
+/*Aqui é para falar sobre o menu do site*/
+
+.menu-hamburger {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 25px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.menu-hamburger span {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff; /* Cor dos riscos */
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.menu-hamburger.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-hamburger.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+
+/* Container #modelos para os cards */
+#modelos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas para os cards */
+    gap: 20px; /* Espaçamento entre os cards */
+    padding: 20px;
+    max-width: 720px; /* Limita a largura do container */
+    margin: 0 auto; /* Centraliza o container na página */
+}
+
+
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.texto{
+    display: flex;
+    align-items: center;
+
+}
+
+/* Estilos para cada card */
+.card {
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-image {
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+}
+
+.card-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+    color: white;
+    text-align: center;
+}
+
+.card-text h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.card-text p {
+    margin-bottom: 10px;
+}
+
+.btn-card {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    #modelos {
+        grid-template-columns: 1fr; /* Ajusta para uma coluna no mobile */
+    }
 }
