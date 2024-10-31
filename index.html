@@ -8,23 +8,115 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="menu-hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
     <header>
         <section class="video-container">
            <video autoplay muted loop="video-bg">
             <source src="video/cars.mp4" type="video/mp4">
            </video>
            <div class="video-texto">
-            <h1>Welcome Dreams </h1>
+            <h1>Welcome to dreams</h1>
             <p>Descover the new</p>
             <a href="#products" class="btn">Explore</a>
            </div>
-
-
-
         </section>
+    </header>
+
+    
+    <section id="products">
         
 
-    </header>
+        <div class="produto"  style="background-image: url('img/porsche-911.jpg');">
+            
+
+            <H3>Produto 1</H3> 
+            <P>Design excepcional.</P>
+
+        </div>
+
+        <div class="produto" style="background-image: url('img/CarreraT.jpg');">
+        <h3>Produto 2</h3>
+        <p>Melhores expericias</p> 
+        </div>
+
+        <div class="produto" style="background-image: url('img/roda.jpeg');">
+        <h3>Produto 3</h3>
+        <p>Segunra nas ruas.</p>
+        </div>
+
+    </section>
+        <h2>Modelos</h2>
+        
+   
+   
+    <section id="modelos">
+        
+    
+        <div class="card">
+            <div class="card-image" style="background-image: url('img/CarreraT.jpg');">
+                <div class="card-text">
+                    <h3>718</h3>
+                    <p>Essence</p>
+                    <p>La sportive deux places au moteur central arrière.</p>
+                    <p>à partir de EUR 162 500,00</p>
+                    <a href="#" class="btn-card">Configurer le 718</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="card-image" style="background-image: url('img/porsche-911.jpg');">
+                <div class="card-text">
+                    <h3>911</h3>
+                    <p>Essence</p>
+                    <p>L'icône de génération en génération.</p>
+                    <p>à partir de EUR 131 700,00</p>
+                    <a href="#" class="btn-card">Configurer la 911</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-image" style="background-image: url('img/CarreraT.jpg');">
+                <div class="card-text">
+                    <h3>718</h3>
+                    <p>Essence</p>
+                    <p>La sportive deux places au moteur central arrière.</p>
+                    <p>à partir de EUR 162 500,00</p>
+                    <a href="#" class="btn-card">Configurer le 718</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image" style="background-image: url('img/CarreraT.jpg');">
+                <div class="card-text">
+                    <h3>718</h3>
+                    <p>Essence</p>
+                    <p>La sportive deux places au moteur central arrière.</p>
+                    <p>à partir de EUR 162 500,00</p>
+                    <a href="#" class="btn-card">Configurer le 718</a>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu-hamburger');
+            menu.classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
